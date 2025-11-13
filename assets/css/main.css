@@ -11,7 +11,42 @@ body {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&family=Poppins:wght@300;600&display=swap');
 
+/* Typography System */
+:root {
+  /* Font Families */
+  --font-heading: 'Montserrat', sans-serif;
+  --font-subheading: 'Poppins', sans-serif;
+  --font-body: 'Lato', sans-serif;
+  --font-accent: 'Poppins', sans-serif; /* or replace with a subtle serif if you like */
+}
+
+/* Headings */
+h1, h2 {
+  font-family: var(--font-heading);
+  font-weight: 400 !important; /* Bold */
+}
+
+/* Subheadings */
+h3, h4, h5, h6 {
+  font-family: var(--font-subheading);
+  font-weight: 600 !important; /* Semi-Bold */
+}
+
+/* Body Text */
+body, p, li, span, a {
+  font-family: var(--font-body);
+  font-weight: 400 !important; /* Regular */
+}
+
+/* Optional Accent / Quote Text */
+blockquote, .accent-text {
+  font-family: var(--font-accent);
+  font-weight: 300 !important; /* Light */
+  font-style: italic;
+}
 audio, canvas, progress, video {
   vertical-align: baseline;
   display: inline-block;
@@ -2783,7 +2818,7 @@ figcaption {
 }
 
 .heading-style-h1.text-color-400.sizing {
-  max-width: 11ch;
+  max-width: 15ch;
 }
 
 .padding-global {
@@ -3481,6 +3516,12 @@ figcaption {
   padding-top: 5rem;
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
 .nav {
   z-index: 9;
   background-color: var(--n-100);
@@ -3506,6 +3547,7 @@ figcaption {
   align-items: stretch;
   display: flex;
   position: static;
+  padding: 1.365rem 0;
 }
 
 .nav_link {
