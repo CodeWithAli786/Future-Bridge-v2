@@ -1,0 +1,59 @@
+<section class="section_experience">
+    <div class="padding-global">
+        <div class="container-large">
+            <div class="padding-section-large top-only">
+                <div class="container-small">
+                    <div stage="" class="experience_component">
+                        <h2 animate="" class="heading-style-h2 text-align-center text-color-400"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                            The <span class="text-weight-bold">FUTURE BRIDGE</span> Experience</h2>
+                        <div class="spacer-large"></div>
+                        <div animate="" class="experience_video-container"
+                            style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+                            <div class="experience_video-wrap"><img
+                                    src="https://cdn.prod.website-files.com/6493f33dd29927a6f539aaf8/64a665e6c05e9415339440bd_Imac%20New.webp"
+                                    loading="lazy" alt="" class="experience_background-image">
+                                <div class="experience_video-positioner">
+                                    <div class="experience_video w-embed">
+                                        <div class="wrapper">
+                                            <div class="youtube" data-embed="KRF6xxp67r4">
+                                                <div class="play-button"></div>
+                                                <img src="https://img.youtube.com/vi/KRF6xxp67r4/maxresdefault.jpg">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      (function() {
+        var youtube = document.querySelectorAll(".youtube");
+
+        for (var i = 0; i < youtube.length; i++) {
+
+          var source = "https://img.youtube.com/vi/" + youtube[i].dataset.embed + "/maxresdefault.jpg";
+
+          var image = new Image();
+          image.src = source;
+          image.addEventListener("load", function() {
+            youtube[i].appendChild(image);
+          }(i));
+
+          youtube[i].addEventListener("click", function() {
+            var iframe = document.createElement("iframe");
+            iframe.setAttribute("frameborder", "0");
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.embed + "?rel=0&showinfo=0&autoplay=1");
+            this.innerHTML = "";
+            this.appendChild(iframe);
+          });
+        };
+
+      })();
+    </script>
+</section>
