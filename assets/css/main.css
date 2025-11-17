@@ -11,22 +11,19 @@ body {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
-/* Google Fonts Import */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Montserrat:wght@700&family=Poppins:wght@300;600&display=swap');
 
 /* Typography System */
 :root {
   /* Font Families */
-  --font-heading: 'Montserrat', sans-serif;
-  --font-subheading: 'Poppins', sans-serif;
-  --font-body: 'Lato', sans-serif;
-  --font-accent: 'Poppins', sans-serif; /* or replace with a subtle serif if you like */
+  --font-heading: 'Elms Sans', sans-serif;
+  --font-body: 'Noto Sans', sans-serif;
+  --font-accent: 'Raleway', sans-serif; /* or replace with a subtle serif if you like */
 }
 
 /* Headings */
 h1, h2 {
   font-family: var(--font-heading);
-  font-weight: 400 !important; /* Bold */
+  font-weight: 600 !important; /* Bold */
 }
 
 /* Subheadings */
@@ -2117,8 +2114,8 @@ textarea.w-input, textarea.w-select {
 
 :root {
   --n-300: #6d6e76;
-  --n-400: #212121;
-  --accent: #49bd99;
+  --n-400: #4b2487;
+  --accent: #34c182;
   --n-200: #f8f8f8;
   --shadow: #0003;
   --n-100: white;
@@ -3263,8 +3260,9 @@ figcaption {
 }
 
 .button:hover {
-  background-color: var(--accent);
+  background-color: var(--n-400);
   color: var(--n-100);
+  border-color: var(--n-400);
   transform: translate(0, -2px);
 }
 
@@ -3342,6 +3340,7 @@ figcaption {
 .button.is-active:hover {
   background-color: var(--n-400);
   color: var(--n-100);
+  border-color: var(--n-400);
 }
 
 .button.is-whatsapp {
@@ -3812,6 +3811,35 @@ figcaption {
   height: 100%;
 }
 
+.section_our-offer {
+  background-color: var(--n-400);
+}
+.section_our-offer h2,
+.section_our-offer h3,
+.section_our-offer p {
+  color: var(--n-100)
+}
+
+.section_our-offer .button {
+  background: var(--n-400);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.footer_subscribe-form-wrap .button {
+  border-color: var(--accent);
+}
+
+.footer_subscribe-form-wrap .button:hover {
+  border-color: var(--n-100);
+}
+
+.section_our-offer .button:hover {
+      background-color: var(--n-1400);
+    color: var(--n-100);
+    border-color: var(--n-100);
+}
+
 .our-offer_list {
   grid-column-gap: 2.5rem;
   grid-row-gap: 2.5rem;
@@ -3855,11 +3883,16 @@ figcaption {
 }
 
 .our-offer_card.no-hover {
-  border-color: var(--border);
+  border-color: var(--accent);
+  text-align: center;
+}
+
+.our-offer_card.no-hover p {
+  text-align: center;
 }
 
 .our-offer_card.no-hover:hover {
-  border-color: var(--border);
+  border-color: var(--n-100);
   outline-color: var(--accent);
   outline-offset: 0px;
   outline-width: 1px;
@@ -3867,7 +3900,7 @@ figcaption {
 }
 
 .our-offer_icon-wrap-2 {
-  box-shadow: 0 3px 6px 0 var(--shadow);
+  box-shadow: 0 3px 6px 0 var(--n-100);
   border-radius: .5rem;
   padding: .5rem;
   display: inline-block;
@@ -5456,6 +5489,7 @@ figcaption {
   padding-right: 2.5rem;
   position: relative;
   overflow: hidden;
+  padding-bottom: 20px;
 }
 
 .press-slider_card {
